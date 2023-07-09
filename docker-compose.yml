@@ -1,0 +1,18 @@
+version: '1'
+
+services:
+  django-backend:
+    build: ./ecommerce_backend
+    command: python manage.py runserver 0.0.0.0:8000
+    image: django-ecommerce-backend
+    container_name: django-ecommerce-backend
+    ports:
+      - "8000:8000"
+
+  nuxt-frontend:
+    build: ./ecommerce-frontend
+    command: npm run dev
+    image: nuxt-ecommerce-frontend
+    container_name: nuxt-ecommerce-frontend
+    ports:
+      - "3000:3000"
