@@ -16,3 +16,4 @@ services:
     container_name: nuxt-ecommerce-frontend
     ports:
       - "3000:3000"
+      - "24678:24678"
